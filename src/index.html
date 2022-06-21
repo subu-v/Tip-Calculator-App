@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <section class="calculator">
+      <div class="calculator__billing">
+        <div class="billing__select-amount">
+          <label class="billing__label" for="total-bill">Bill</label>
+          <input
+            type="number"
+            class="billing__amount"
+            id="total-bill"
+            min="1"
+            placeholder="0"
+            required
+          />
+        </div>
+
+        <div class="billing__select-tip">
+          <label class="billing__label" for="total-people">Select Tip %</label>
+          <div class="billing__tip-buttons">
+            <button class="billing__tip-button">5%</button>
+            <button class="billing__tip-button">10%</button>
+            <button class="billing__tip-button">15%</button>
+            <button class="billing__tip-button">20%</button>
+            <button class="billing__tip-button">25%</button>
+            <input
+              type="number"
+              class="billing__tip-custom"
+              min="1"
+              placeholder="Custom"
+            />
+          </div>
+        </div>
+
+        <div class="billing__select-people">
+          <label class="billing__label" for="total-people"
+            >Number of People</label
+          >
+          <input
+            class="billing__people"
+            type="number"
+            id="total-people"
+            min="1"
+            placeholder="0"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="calculator__results">
+        Tip Amount / person Total / person Reset
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
