@@ -11,7 +11,7 @@
 ###############################################
 *.xd
 
-# Avoid your project being littered with annoying .DS_Store files!
+# Avoid your project being littered with annoying .DShttps://subhus-tip-calculator.netlify.app/_Store files!
 .DS_Store
 .prettierignore
 
