@@ -32,6 +32,7 @@
             class="billing__amount"
             id="total-bill"
             min="1"
+            step="any"
             placeholder="0"
             required
           />
@@ -40,7 +41,9 @@
         <div class="billing__select-tip">
           <label class="billing__label" for="total-people">Select Tip %</label>
           <div class="billing__tip-buttons">
-            <button class="billing__tip-button">5%</button>
+            <button class="billing__tip-button billing__tip-button--initial">
+              5%
+            </button>
             <button class="billing__tip-button">10%</button>
             <button class="billing__tip-button">15%</button>
             <button class="billing__tip-button">20%</button>
@@ -49,6 +52,7 @@
               type="number"
               class="billing__tip-custom"
               min="1"
+              step="any"
               placeholder="Custom"
             />
           </div>
@@ -63,7 +67,9 @@
             type="number"
             id="total-people"
             min="1"
-            placeholder="0"
+            step="any"
+            value="1"
+            placeholder="1"
             required
           />
         </div>

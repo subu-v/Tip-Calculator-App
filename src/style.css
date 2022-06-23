@@ -98,7 +98,7 @@ input[type="number"]::-webkit-outer-spin-button {
   color: var(--color-primary--dark);
 
   font-family: inherit;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
   text-align: end;
 }
@@ -154,13 +154,17 @@ input[type="number"]::-webkit-outer-spin-button {
   border: 2px solid transparent;
   border-radius: 0.5rem;
   background-color: var(--color-primary--dark);
-  padding: 0.6rem 1.6rem;
-  font-size: 1.6rem;
+  padding: 0.4rem 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
   font-family: inherit;
   color: var(--color-greyish--light);
 }
 
+.billing__tip-button--initial {
+  background-color: var(--color-primary);
+  color: var(--color-primary--dark);
+}
 .billing__tip-button:hover,
 .reset-button:hover {
   cursor: pointer;
@@ -208,7 +212,7 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: var(--color-primary);
   border: none;
   border-radius: 0.4rem;
-  color: var(--color-greyish--dark);
+  color: var(--color-primary--dark);
 
   font-size: 1.6rem;
   font-weight: 700;
@@ -226,6 +230,10 @@ input[type="number"]::-webkit-outer-spin-button {
 .reset-button:hover {
   opacity: 1;
 }
+
+/* .billing__amount:focus .reset-button {
+  background-color: var(--color-primary);
+} */
 
 @media (min-width: 56em) {
   body {
