@@ -40,6 +40,7 @@ const calculateTip = function (tipPercent) {
   resetButton.style.opacity = 1;
 };
 
+//Buttons
 tipPercentButton.forEach((i) => {
   i.addEventListener("click", (event) => {
     calculateTip(parseFloat(i.textContent));
@@ -50,11 +51,13 @@ tipPercentButton.forEach((i) => {
   });
 });
 
+//Custom Input
 tipCustom.addEventListener("input", function () {
   calculateTip(parseFloat(tipCustom.value));
   setButtonColors();
 });
 
+//Bill and NumOfPeople
 [bill, numOfPeople].forEach((element) => {
   element.addEventListener("input", function () {
     if (numOfPeople.value === "0") {
@@ -67,13 +70,13 @@ tipCustom.addEventListener("input", function () {
 });
 
 resetButton.addEventListener("click", function () {
+  bill.value = 0;
   currentTipPercent = 0;
+  numOfPeople.value = 1;
   resetButton.style.opacity = 0.3;
+  root.style.setProperty("--psedo-opacity", 0);
   tipPerPerson.textContent = "0.00";
   totalPerPerson.textContent = "0.00";
-  bill.value = 0;
-  numOfPeople.value = 1;
-  root.style.setProperty("--psedo-opacity", 0);
 
   setButtonColors();
 });
