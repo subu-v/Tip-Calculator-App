@@ -33,6 +33,23 @@ body {
   display: grid;
   justify-content: center;
   align-items: end;
+
+  position: relative;
+}
+
+.heading-primary {
+  color: var(--color-primary--dark);
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 8px;
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.heading-primary span {
+  display: block;
 }
 
 .calculator {
@@ -247,6 +264,11 @@ input[type="number"]::-webkit-outer-spin-button {
 @media (min-width: 56em) {
   body {
     place-items: center;
+  }
+
+  .heading-primary {
+    top: 8%;
+    left: 50%;
   }
   .calculator {
     display: flex;

@@ -23,80 +23,85 @@
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <section class="calculator">
-      <div class="calculator__billing">
-        <div class="billing__select-amount">
-          <label class="billing__label" for="total-bill">Bill</label>
-          <input
-            type="number"
-            class="billing__amount"
-            id="total-bill"
-            min="1"
-            step="any"
-            placeholder="0"
-            required
-          />
-        </div>
-
-        <div class="billing__select-tip">
-          <label class="billing__label" for="total-people">Select Tip %</label>
-          <div class="billing__tip-buttons">
-            <button class="billing__tip-button billing__tip-button--initial">
-              5%
-            </button>
-            <button class="billing__tip-button">10%</button>
-            <button class="billing__tip-button">15%</button>
-            <button class="billing__tip-button">25%</button>
-            <button class="billing__tip-button">50%</button>
+    <section class="section-calculator">
+      <hl class="heading-primary">SPLI<span>TTER</span></hl>
+      <div class="calculator">
+        <div class="calculator__billing">
+          <div class="billing__select-amount">
+            <label class="billing__label" for="total-bill">Bill</label>
             <input
               type="number"
-              class="billing__tip-custom"
+              class="billing__amount"
+              id="total-bill"
               min="1"
               step="any"
-              placeholder="Custom"
+              placeholder="0"
+              required
+            />
+          </div>
+
+          <div class="billing__select-tip">
+            <label class="billing__label" for="total-people"
+              >Select Tip %</label
+            >
+            <div class="billing__tip-buttons">
+              <button class="billing__tip-button billing__tip-button--initial">
+                5%
+              </button>
+              <button class="billing__tip-button">10%</button>
+              <button class="billing__tip-button">15%</button>
+              <button class="billing__tip-button">25%</button>
+              <button class="billing__tip-button">50%</button>
+              <input
+                type="number"
+                class="billing__tip-custom"
+                min="1"
+                step="any"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+
+          <div class="billing__select-people">
+            <label
+              class="billing__label billing__label--invalid-text"
+              for="total-people"
+              >Number of People</label
+            >
+            <input
+              class="billing__people"
+              type="number"
+              id="total-people"
+              min="1"
+              step="any"
+              value="1"
+              placeholder="1"
+              required
             />
           </div>
         </div>
 
-        <div class="billing__select-people">
-          <label
-            class="billing__label billing__label--invalid-text"
-            for="total-people"
-            >Number of People</label
-          >
-          <input
-            class="billing__people"
-            type="number"
-            id="total-people"
-            min="1"
-            step="any"
-            value="1"
-            placeholder="1"
-            required
-          />
+        <div class="calculator__result">
+          <div class="result__tip-per-person-box">
+            <p class="result__tip-text">
+              Tip Amount
+              <span> / person </span>
+            </p>
+
+            <p class="result__tip-per-person">&dollar;0.00</p>
+          </div>
+
+          <div class="result__tip-total-box">
+            <p class="result__tip-text">
+              Total
+              <span> / person </span>
+            </p>
+
+            <p class="result__tip-total">&dollar;0.00</p>
+          </div>
+
+          <button class="reset-button">Reset</button>
         </div>
-      </div>
-
-      <div class="calculator__result">
-        <div class="result__tip-per-person-box">
-          <p class="result__tip-text">
-            Tip Amount
-            <span> / person </span>
-          </p>
-
-          <p class="result__tip-per-person">&dollar;0.00</p>
-        </div>
-
-        <div class="result__tip-total-box">
-          <p class="result__tip-text">
-            Total
-            <span> / person </span>
-          </p>
-
-          <p class="result__tip-total">&dollar;0.00</p>
-        </div>
-
-        <button class="reset-button">Reset</button>
       </div>
     </section>
     <script src="src/script.js"></script>
