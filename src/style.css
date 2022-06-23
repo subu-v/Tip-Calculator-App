@@ -8,6 +8,7 @@
   --color-white: hsl(0, 0%, 100%);
   --color-focus-invalid: hsl(4, 86%, 65%);
   --color-button-hover: hsl(171, 55%, 73%);
+  --psedo-opacity: 0;
 }
 
 *,
@@ -119,10 +120,6 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 90%;
 }
 
-/* .billing__amount::placeholder,
-.billing__people::placeholder {
-} */
-
 .billing__amount:hover,
 .billing__tip-custom:hover,
 .billing__people:hover {
@@ -141,6 +138,21 @@ input[type="number"]::-webkit-outer-spin-button {
 .billing__tip-custom:focus:invalid,
 .billing__people:focus:invalid {
   border: 2px solid var(--color-focus-invalid);
+}
+
+.billing__label {
+  position: relative;
+}
+
+.billing__label--invalid-text::after {
+  content: "Can't be zero";
+  color: var(--color-focus-invalid);
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  right: 1.5%;
+  opacity: var(--psedo-opacity);
+  transition: all 0.5s ease;
 }
 
 .billing__tip-buttons {
@@ -165,6 +177,7 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: var(--color-primary);
   color: var(--color-primary--dark);
 }
+
 .billing__tip-button:hover,
 .reset-button:hover {
   cursor: pointer;
@@ -173,7 +186,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .billing__tip-custom {
-  width: 11rem;
+  width: 14rem;
   padding-right: 1.4rem;
 }
 
@@ -230,10 +243,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .reset-button:hover {
   opacity: 1;
 }
-
-/* .billing__amount:focus .reset-button {
-  background-color: var(--color-primary);
-} */
 
 @media (min-width: 56em) {
   body {

@@ -1,5 +1,8 @@
 "use strict";
 
+// Added this, so that i could manipulate the root custom variables
+const root = document.querySelector(":root");
+
 //Bill setting Elements
 const bill = document.querySelector(".billing__amount");
 const tipPercentButton = document.querySelectorAll(".billing__tip-button");
@@ -54,6 +57,11 @@ tipCustom.addEventListener("input", function () {
 
 [bill, numOfPeople].forEach((element) => {
   element.addEventListener("input", function () {
+    if (numOfPeople.value === "0") {
+      root.style.setProperty("--psedo-opacity", 1);
+    } else {
+      root.style.setProperty("--psedo-opacity", 0);
+    }
     calculateTip(currentTipPercent);
   });
 });
@@ -65,5 +73,7 @@ resetButton.addEventListener("click", function () {
   totalPerPerson.textContent = "0.00";
   bill.value = 0;
   numOfPeople.value = 1;
+  root.style.setProperty("--psedo-opacity", 0);
+
   setButtonColors();
 });
